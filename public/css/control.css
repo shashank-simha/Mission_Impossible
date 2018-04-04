@@ -1,0 +1,232 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 2%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+}
+
+#brief {
+    background-image: url("../images/image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40%;
+    width: 21%;
+    border-radius: 5%;
+}
+
+#brief:hover {
+    background-image: url("../images/red.png");
+    cursor: pointer;
+}
+
+#formModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index:1;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.8);
+    overflow: auto;
+}
+
+#formCont {
+    position: relative;
+    height: 50%;
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: wheat;
+    border-radius: 2%;
+}
+
+
+
+form {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#submitBtn {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5%;
+    height: 2rem;
+    width: 5rem;
+    font-size: 1rem;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+}
+
+#submitBtn:focus {
+    outline: 0;
+}
+
+#controlKey {
+    margin-bottom: 10%;
+    /*margin-right: 5%;*/
+    font-size: 1.2rem;
+    border: transparent;
+    background: transparent;
+    text-align: center;
+    border-bottom: 1px dashed black;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: block;
+    margin-right: 1%;
+    font-size: 1.2rem;
+    color: black;
+}
+
+#crypt {
+    text-align: center;
+    font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+    font-size: 1.5rem;
+}
+
+#modalHead {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+}
+
+
+#defuseModal {
+    display: none; /* Hidden by default */
+}
+
+
+#defuseCont {
+    position: relative;
+    height: 85%;
+    width: 80%;
+    background-color: wheat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+#msgs {
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+}
+
+#msgs div {
+    width: 100%;
+    padding: 1.5%;
+    border-bottom: 1px solid black;
+}
+#msg2Text {
+    font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+.close {
+    margin-right: 3%;
+    font-size: 1.5rem;
+    color: black;
+}
+
+#msgHead {
+    width:100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+
+#msgHeadTitle {
+    margin-left: 3%;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.model {
+    border:1px solid whitesmoke;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#msgBtn:focus {
+    outline: 0;
+}
+
+#msgBtn {
+    height: 6%;
+    width: 6%;
+    border-radius: 5%;
+    color: whitesmoke;
+    background:transparent;
+    border: transparent;
+    font-size: 1.15rem;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+}
+
+#msgBtn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: whitesmoke;
+}

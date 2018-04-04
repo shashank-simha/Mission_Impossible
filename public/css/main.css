@@ -1,0 +1,440 @@
+html, body, div, img, header {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /*background-color: rgba(8, 42, 40, 0.96);*/
+    background-color: black;
+}
+
+header {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#logo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 100%;
+    width: 5%;
+}
+
+header p {
+    font-family: "Ubuntu", Arial, Helvetica, Sans-Serif;
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+#sec {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+}
+
+#MAIN {
+    margin-top: 1.25rem;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#Stat, #map, #timerArt {
+    border: 2px solid whitesmoke;
+    height: 100%;
+    border-radius: 2%;
+    margin: 2px;
+    box-shadow: 4px 4px #ffffffff;
+}
+
+#param {
+    /*border: 1px solid whitesmoke;*/
+}
+
+#Stat {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#missileStat {
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#missileStat, #timeDiv {
+    height: 10%;
+}
+
+#param {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#param p {
+    padding-left: 5%;
+    font-size: 1.1rem;
+}
+
+#param p span {
+    font-size: 1.15rem;
+}
+
+p {
+    color: whitesmoke;
+}
+
+#timerArt, #Stat {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+#missileStat p {
+    font-size: 1.75rem;
+}
+
+#timerArt p {
+    font-size: 1.75rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer p {
+    font-family: "Ubuntu", Arial, Helvetica, Sans-Serif;
+}
+
+#control {
+    display:flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items:center;
+    height: 15%;
+}
+
+#BLINK {
+    font-size: 2rem;
+    font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    50% {opacity: 0;}
+}
+
+#abort:focus {
+    outline: 0;
+}
+
+#abort:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+#abort {
+    height: 5rem;
+    width: 14rem;
+    background-color: #ff2120;
+    font-size: 2.25rem;
+    border-radius: 4%;
+    border: transparent;
+    color: black;
+}
+#mark {
+    position: absolute;
+    right: -45%;
+    top: -35%;
+    height: 60%;
+    width: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#map {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    /*background-color: red;*/
+}
+
+#mapDiv {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+#mapImg {
+    height: 90%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+}
+
+#msgDiv {
+    position: absolute;
+    right: 10%;
+    top: 45%;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    height: 2.75rem;
+    width: 7rem;
+}
+
+#msgBtn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: whitesmoke;
+}
+
+#msgDiv:focus {
+    outline: 0;
+}
+
+#msgBtn:focus {
+    outline: 0;
+}
+
+#msgBtn {
+    height: 100%;
+    width: 100%;
+    color: whitesmoke;
+    background:transparent;
+    border: transparent;
+    font-size: 1.15rem;
+}
+
+#defuseModal {
+    display: none; /* Hidden by default */
+}
+
+.model {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#defuseCont {
+    position: relative;
+    height: 85%;
+    width: 80%;
+    background-color: wheat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+#msgHead, #abortHead {
+    width:100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+#msgHead {
+    height: 6%;
+}
+
+#msgHeadTitle, #abortHeadTitle{
+    margin-left: 3%;
+    font-size: 1.4rem;
+    color: black;
+}
+
+#msgHeadTitle {
+    font-size: 1.1rem;
+}
+
+.close {
+    margin-right: 3%;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.msg2Text {
+    font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+#msgs {
+    height: 94%;
+    width: 100%;
+    overflow: auto;
+}
+
+#msgs div {
+    width: 100%;
+    padding: 1.5%;
+    border-bottom: 1px solid black;
+}
+
+
+
+#abortModal {
+    display: none;
+}
+
+#abortCont {
+    position: relative;
+    height: 60%;
+    width: 60%;
+    background-color: wheat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+#abort_pass {
+    width: 30%;
+    text-align: center;
+    font-size: 1.35rem;
+    border:transparent;
+    border-bottom: 2px dashed black;
+    background-color: transparent;
+}
+
+#abort_pass:focus {
+    outline: 0;
+}
+
+#abortInput {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#abortMsg {
+    font-size: 2rem;
+    color: black;
+}
+
+#submitBtn {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5%;
+    height: 2rem;
+    width: 6rem;
+    font-size: 1.1rem;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+}
+
+#submitBtn:focus {
+    outline: 0;
+}
+
+#timerArt {
+    /*height: 100%;*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#timeDiv {
+    height: 10%;
+    text-align: center;
+}
+
+#timer {
+    height: 90%;
+    width: 100%;
+}
+
+#timerCont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#timerCont p {
+    font-size: 5rem;
+}
+
+#colon {
+    /*animation: blink 1s linear infinite;*/
+}
+
+.no-hover:hover {}
